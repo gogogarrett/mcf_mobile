@@ -1,0 +1,6 @@
+{
+	"host_map": [
+		"$.incentivewall.com => incentivewall.com",
+		"$.incentivewall.com => www.incentivewall.com"
+	]
+}
