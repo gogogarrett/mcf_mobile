@@ -21,11 +21,9 @@ $('./body') {
   #  move_to("//a[@id='logo']", "before")
   #  insert("div", "", class: "clearfix")
   #}
-  # $$(".contain") {remove()}
+  $$(".container") {remove()}
   # $$("#header") { remove() }
   $$("#menu") { remove() }
-  $$("div.form-section") {
-    remove()
-  }
+  $$("div.form-section") {remove() }
   # $$("#right-column") { remove() }
 }
