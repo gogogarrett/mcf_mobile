@@ -1,3 +1,27 @@
 header._header {
-  
+  background: #8a8a8a;
+  padding: 5px 10px;
+  margin: 0px;
+
+  section.top_banner {
+    width: 100%;
+
+    p, a { float: left; }
+    p {
+      padding: 0px;
+      margin: 0px;
+
+      &.welcome {
+        margin-right: 15px;
+      }
+    }
+
+    a {
+
+      &.home_icon {
+        float: right;
+      }
+    }
+  }
+
 }
