@@ -6,24 +6,13 @@ $('./body') {
   }
 
   $$(".user_settings_link") {
-    move_to("//a[@class='home_icon']", "before")
+    $$("a") {
+      add_class("setting_icon")
+      move_to("//a[@class='home_icon']", "after")
+    }
+    remove()
   }
   $$(".brand") {
     move_to("//a[@class='home_icon']", 'before')
   }
-
-  #$$("#logged") {
-  #  move_to("//a[@id='logo']", "after")
-  #  insert("div", "", class: "clearfix")
-  #}
-
-  #$$("#top-dashboard") {
-  #  move_to("//a[@id='logo']", "before")
-  #  insert("div", "", class: "clearfix")
-  #}
-  $$(".container") {remove()}
-  # $$("#header") { remove() }
-  $$("#menu") { remove() }
-  $$("div.form-section") {remove() }
-  # $$("#right-column") { remove() }
 }

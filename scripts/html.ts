@@ -9,7 +9,7 @@ $("/html") {
 
   # Needed to begin mobilizing
   remove_all_styles()
-  remove_scripts()
+  remove_desktop_js()
   remove_html_comments()
 
   # Late load all the images on the site

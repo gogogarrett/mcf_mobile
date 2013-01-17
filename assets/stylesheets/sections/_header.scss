@@ -21,7 +21,10 @@ header._header {
       &.home_icon {
         float: right;
       }
+      &.setting_icon {
+        float: right;
+        margin-right: 5px;
+      }
     }
   }
-
 }
