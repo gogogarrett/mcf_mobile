@@ -9,12 +9,12 @@ $('./body') {
     move_to("//section[@class='logo_area']")
   }
 
-  insert("section", class: "nav_area")
   insert("section", class: "point_section") {
     insert("section", class: "points")
     insert("section", class: "game_tokens")
     insert("section", class: "gift_tokens")
   }
+  insert("section", class: "nav_area")
 
   $$(".token_and_points_widget") {
     $$("h2") {
@@ -44,16 +44,15 @@ $('./body') {
 
     $$(".gift") {
       $$(".smalln") {
-        move_to("//section[@class='game_tokens']")
+        move_to("//section[@class='gift_tokens']")
       }
       $$("strong") {
-        move_to("//section[@class='game_tokens']")
+        move_to("//section[@class='gift_tokens']")
       }
       remove()
     }
-    # remove()
+    remove()
   }
-
 
   $$("li.mobile_only") {
     move_to("//section[@class='nav_area']")
@@ -63,8 +62,7 @@ $('./body') {
     move_to("//section[@class='logo_area']", 'after')
   }
 
-
-
+  # things to be removed
   $$("#header"){ remove() }
   $$("#footer") { remove() }
   $$(".container") {remove()}

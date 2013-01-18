@@ -22,6 +22,10 @@ match($status) {
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }
+      with(/users\/\d+\/edit/) {
+        log("--> Importing pages/setting.ts in mappings.ts")
+        @import pages/setting.ts
+      }      
       with(/nomination_process\/select_initiative\/*/) {
         log("--> Importing pages/login.ts in mappings.ts")
         @import pages/login.ts
