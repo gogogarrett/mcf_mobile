@@ -1,0 +1,32 @@
+._nomination_process {
+
+  &._select_initiative {
+
+    div.section_initiative {
+      width: 95%;
+      border-bottom: 1px solid red;
+
+      form {
+        float: right;
+      }
+    }
+  }
+
+  &._select_recipients {
+
+    form {
+      select {
+        width: 100%;
+      }
+    }
+  }
+
+  &._select_reason {
+    form {
+      texarea {
+        width: 100%;
+      }
+    } 
+  }
+
+}

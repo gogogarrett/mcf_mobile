@@ -18,18 +18,56 @@ match($status) {
     log("--> STATUS: 200")
 
     match($path) {
-      with(/^\/$|^\/\?/) {
+      with(/^\/$|^\/\?/) { # / 
         log("--> Importing pages/home.ts in mappings.ts")
         @import pages/home.ts
       }
-      with(/users\/\d+\/edit/) {
+
+      # Settings
+      with(/users\/\d+\/edit/) { 
         log("--> Importing pages/setting.ts in mappings.ts")
         @import pages/setting.ts
       }      
-      with(/nomination_process\/select_initiative\/*/) {
-        log("--> Importing pages/login.ts in mappings.ts")
-        @import pages/login.ts
+
+      # Nomination Process
+      with(/nomination_process\/select_initiative\/*/) { # */
+        log("\n\n --> Importing pages/nomination_process/nomination_process.ts in mappings.ts")
+        log("\n\n --> Importing pages/nomination_process/select_initiative.ts in mappings.ts")
+        @import pages/nomination_process/select_initiative.ts
+        @import pages/nomination_process/nomination_process.ts
       }
+      with(/nomination_process\/select_recipients\?*/) {
+        log("\n\n --> Importing pages/nomination_process/select_initiative.ts in mappings.ts")
+        @import pages/nomination_process/select_recipients.ts
+        @import pages/nomination_process/nomination_process.ts
+      }
+      with(/nomination_process\/select_reason\?*/) {
+        log("\n\n --> Importing pages/nomination_process/select_reason.ts in mappings.ts")
+        @import pages/nomination_process/select_reason.ts
+        @import pages/nomination_process/nomination_process.ts
+      }
+      with(/nomination_process\/select_components\?*/) {
+        log("\n\n --> Importing pages/nomination_process/select_initiative.ts in mappings.ts")
+        @import pages/nomination_process/select_components.ts
+        @import pages/nomination_process/nomination_process.ts
+      }
+      with(/nomination_process\/save_components\/?*/) {
+        log("\n\n --> Importing pages/nomination_process/select_initiative.ts in mappings.ts")
+        @import pages/nomination_process/select_components.ts
+        @import pages/nomination_process/nomination_process.ts
+      }
+      with(/nomination_process\/preview\/?*/) {
+        log("\n\n --> Importing pages/nomination_process/preview.ts in mappings.ts")
+        @import pages/nomination_process/preview.ts
+        @import pages/nomination_process/nomination_process.ts
+      }
+      with(/nomination_process\/*/) {
+        log("\n\n --> Importing pages/nomination_process.ts in mappings.ts")
+        @import pages/nomination_process/nomination_process.ts
+      }
+
+      # Awards 
+      # Approvals
       else() {
         log("--> No page match in mappings.ts")
       }

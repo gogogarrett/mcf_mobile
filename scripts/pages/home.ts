@@ -11,8 +11,8 @@ $('./body') {
 
   insert("section", class: "point_section") {
     insert("section", class: "points")
-    insert("section", class: "game_tokens")
     insert("section", class: "gift_tokens")
+    insert("section", class: "game_tokens")
   }
   insert("section", class: "nav_area")
 
@@ -23,30 +23,30 @@ $('./body') {
     }
 
     $$(".box") {
-      $$(".bign") {
+      $$("strong") {
         move_to("//section[@class='points']")
       }
-      $$("strong") {
+      $$(".bign") {
         move_to("//section[@class='points']")
       }
       remove()
     }
 
     $$(".game") {
-      $$(".smalln") {
+      $$("strong") {
         move_to("//section[@class='game_tokens']")
       }
-      $$("strong") {
+      $$(".smalln") {
         move_to("//section[@class='game_tokens']")
       }
       remove()
     }
 
     $$(".gift") {
-      $$(".smalln") {
+      $$("strong") {
         move_to("//section[@class='gift_tokens']")
       }
-      $$("strong") {
+      $$(".smalln") {
         move_to("//section[@class='gift_tokens']")
       }
       remove()
@@ -63,9 +63,6 @@ $('./body') {
   }
 
   # things to be removed
-  $$("#header"){ remove() }
-  $$("#footer") { remove() }
   $$(".container") {remove()}
-  $$("#menu") { remove() }
   $$("div.form-section") {remove() }
 }

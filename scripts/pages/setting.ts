@@ -5,7 +5,7 @@ $('./body') {
     insert("h2", "Settings") {
       insert("section", class: "locale_changer")
       insert("section", class: "logout") {
-        insert("a", "Logout", href: "/users/sign_out")
+        insert("a", "Logout", href: "/users/sign_out", data-method: "delete")
       }
     }
   }
