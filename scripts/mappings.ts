@@ -67,7 +67,17 @@ match($status) {
       }
 
       # Awards 
+
       # Approvals
+      with(/my_approvals_mobile\/\d+/) {
+        log("\n\n --> Importing pages/approvals/show.ts in mappings.ts")
+        @import pages/approvals/show.ts
+      }
+      with(/my_approvals_mobile/) {
+        log("\n\n --> Importing pages/approvals/index.ts in mappings.ts")
+        @import pages/approvals/index.ts
+      }
+
       else() {
         log("--> No page match in mappings.ts")
       }

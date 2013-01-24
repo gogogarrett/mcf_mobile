@@ -1,0 +1,35 @@
+._approvals {
+
+  nav {
+    width: 100%;
+    overflow: hidden;
+
+    ul {
+      overflow: hidden;
+      margin: 0px; padding: 0px;
+      list-style: none;
+
+      li {
+        width: 33%;
+        float: left;
+        margin: 0px;
+
+        a {
+          padding: 15px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  section {
+
+    &.award-details {
+      margin-bottom: 15px;
+      border-bottom: 1px solid black;
+      a {
+        float: right;
+      }
+    }
+  }
+}

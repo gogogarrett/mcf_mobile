@@ -17,6 +17,7 @@
 // Pages
 @import "pages/_home";
 @import "pages/_nomination_process";
+@import "pages/_approvals";
 
 html,body {
   padding: 0px;
@@ -41,4 +42,8 @@ html[xmlns] .clearfix {
  
 * html .clearfix {
   height: 1%;
+}
+
+.hidden {
+  display: none;
 }
