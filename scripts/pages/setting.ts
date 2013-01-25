@@ -4,10 +4,12 @@ $('./body') {
   insert("section", class: "settings_form") {
     insert("h2", "Settings") {
       insert("section", class: "locale_changer")
-      insert("section", class: "logout") {
-        insert("a", "Logout", href: "/users/sign_out", data-method: "delete")
-      }
+      insert("section", class: "logout")
     }
+  }
+
+  $$("#logout_form") {
+    move_to("//section[@class='logout']")
   }
 
   $$("#change_locale") {
@@ -16,7 +18,5 @@ $('./body') {
 
   # things to be removed
   $$("#header"){ remove() }
-  $$("#footer") { remove() }
   $$(".container") {remove()}
-  $$("#menu") { remove() }
 }

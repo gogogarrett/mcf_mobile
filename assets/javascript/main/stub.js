@@ -52,22 +52,22 @@ x$.ready(function() {
   // }
   // JSON.stringify(all_data);
 
-  var token = x$("meta[name='csrf-token']").attr("content");
-  $form.attr('data-remote', false)
-  $form = x$(".comments form");
+  // var token = x$("meta[name='csrf-token']").attr("content");
+  // $form.attr('data-remote', false)
+  // $form = x$(".comments form");
 
-  $form.on('submit', function(e) {
-    e.preventDefault();
+  // $form.on('submit', function(e) {
+  //   e.preventDefault();
 
-    x$(this).xhr(x$(this).attr('action'), {
-      method:   'post',
-      async:    'true',
-      headers: { 'X-CSRF-Token': token },
-      data:     {}, // data here
-      callback: function() {
-        // stuff here
-      }
-    });
-  });
+  //   x$(this).xhr(x$(this).attr('action'), {
+  //     method:   'post',
+  //     async:    'true',
+  //     headers: { 'X-CSRF-Token': token },
+  //     data:     {}, // data here
+  //     callback: function() {
+  //       // stuff here
+  //     }
+  //   });
+  // });
 
 });

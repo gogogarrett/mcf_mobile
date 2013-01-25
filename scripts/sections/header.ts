@@ -16,10 +16,5 @@ $('./body') {
     move_to("//a[@class='home_icon']", 'before')
   }
 
-  $$("#header"){ remove() }
   $$("#menu") { remove() }
-  # $$("#footer") { remove() }
-  # $$(".container") {remove()}
-  # $$("div.form-section") {remove() }
-
 }

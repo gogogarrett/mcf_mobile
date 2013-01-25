@@ -16,4 +16,5 @@ $("./body") {
 
 
   $$("div.clearfix") { remove() }
+  $$("#header"){ remove() }
 }
