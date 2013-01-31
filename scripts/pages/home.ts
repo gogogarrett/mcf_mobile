@@ -66,4 +66,5 @@ $('./body') {
   $$(".container") {remove()}
   $$("div.form-section") {remove() }
   $$("#header"){ remove() }
+
 }

@@ -23,6 +23,11 @@ match($status) {
         @import pages/home.ts
       }
 
+      with(/users\/sign_in/) {
+        log("--> Importing pages/login.ts in mappings.ts")
+        @import pages/login.ts
+      }
+
       # Settings
       with(/users\/\d+\/edit/) { 
         log("--> Importing pages/setting.ts in mappings.ts")
@@ -67,6 +72,10 @@ match($status) {
       }
 
       # Awards 
+      with(/user_awards/) {
+        log("\n\n --> Importing pages/approvals/show.ts in mappings.ts")
+        @import pages/user_awards.ts
+      }
 
       # Approvals
       with(/my_approvals_mobile\/\d+/) {
